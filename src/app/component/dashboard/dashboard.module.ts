@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { FlexModule } from '@angular/flex-layout';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 export const ROUTES: Routes = [{ path: '', component: DashboardComponent }];
 
@@ -22,7 +23,8 @@ export const ROUTES: Routes = [{ path: '', component: DashboardComponent }];
     FlexModule,
     MatButtonModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   exports: [DashboardComponent]
 })

@@ -21,6 +21,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { ForgetPasswordComponent } from './component/account/forget-password/forget-password.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutModule } from './core/layout/dashboard-layout/layout.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 export const ROUTES: Routes = [
   {path:'login', component:LoginComponent},
@@ -54,6 +55,7 @@ export const ROUTES: Routes = [
     MatSliderModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
+    MatSnackBarModule
   ],
   exports: [],
   providers: [],

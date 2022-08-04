@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoaderModule } from '../../common/loader/loader.module';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     CommonModule,
     RouterModule,
     FormsModule,
+    LoaderModule,
     ReactiveFormsModule,
     AppRoutingModule,
     MatSidenavModule,

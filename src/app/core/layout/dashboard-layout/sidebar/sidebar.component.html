@@ -1,14 +1,10 @@
 <mat-nav-list class="pt-0 dashboard-sidebar">
-    <div class="p-0">
-        <a mat-list-item  routerLink="/dashboard">
-            <mat-icon class="sidenav-icon material-icons-outlined">home</mat-icon>
-            Dashboard
+    <div *ngFor="let item of routes" class="p-0">
+        <a *ngIf="item" mat-list-item  [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="'active'" [routerLink]="['/' + item.path]">
+            <mat-icon class="sidenav-icon material-icons-outlined">{{ item.data.icon }}</mat-icon>
+            {{ item.data.text }}
         </a>
-        <a mat-list-item  routerLink="/lead">
-            <mat-icon class="sidenav-icon material-icons-outlined">home</mat-icon>
-            Lead
-        </a>
-        <div>
+        <!-- <div *ngIf="item.item != null" [class.nested-menu]="item.showMenu">
             <a mat-list-item>
                 <mat-icon class="sidenav-icon material-icons-outlined">home</mat-icon>
                 <span>Dashboard</span>
@@ -28,6 +24,6 @@
                     </span>
                 </mat-nav-list>
             </div>
-        </div>
+        </div> -->
     </div>
 </mat-nav-list>
