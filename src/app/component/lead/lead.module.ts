@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LeadListComponent } from './lead-list/lead-list.component';
 import { LeadGenerateComponent } from './lead-generate/lead-generate.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MatCard, MatCardModule } from '@angular/material/card';
 
 
 export const ROUTES: Routes = [
@@ -18,7 +19,8 @@ export const ROUTES: Routes = [
   ],
   imports: [
     RouterModule.forChild(ROUTES),
-    CommonModule
+    CommonModule,
+    MatCardModule
   ],
 })
 export class LeadModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-lead-list',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeadListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router : Router) { }
 
   ngOnInit(): void {
   }
+
+  AddLead(){
+    this._router.navigate(['/lead/leadgenerate']);
+  }
+
 
 }
