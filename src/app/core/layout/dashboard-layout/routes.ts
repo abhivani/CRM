@@ -1,8 +1,14 @@
 export const routes =[
       {
-            path:'dashboard'            
+            path:'dashboard',
+            data: {icon: 'home', text:'Home'},
+            item: [],
+            showMenu: false
       },
       {
-            path:'lead'
+            path:'lead',
+            data: {icon: 'assignment_turned_in', text:'Lead'},
+            item: [],
+            showMenu: false
       }
 ]
