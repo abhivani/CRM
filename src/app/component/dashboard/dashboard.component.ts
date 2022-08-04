@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AppRoute } from 'src/app/core/class/app-route';
+import { BaseComponent } from './../../core/class/base-component';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent extends BaseComponent implements OnInit {
   AppRoute = AppRoute;
   
   constructor(
     private _router: Router,
-  ) { }
-
-  ngOnInit(): void {
-    this.login();
+    private _snackBar: MatSnackBar,
+  ) { 
+    super(_snackBar);
   }
 
-  login(){
-    alert('User is sucessfully logged IN !!!');
+  ngOnInit(): void {
   }
 
   navigateTo(path: string) {

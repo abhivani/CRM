@@ -17,7 +17,7 @@ export const ROUTES: Routes = [
     LeadGenerateComponent,
   ],
   imports: [
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forChild(ROUTES),
     CommonModule
   ],
 })

@@ -1,3 +1,4 @@
+<mat-spinner *ngIf="isLoading" id="loading"></mat-spinner>
 <mat-toolbar mat-elevation-z3>
       <button type="button" mat-button (click)="drawer.toggle()">
          <img src="\assets\img\icons\menu.png" alt="menu" />  
@@ -27,15 +28,14 @@
       </mat-menu>
     </mat-toolbar>
 
-    <mat-sidenav-container class="example-container" autosize hasBackdrop="false"
-    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #drawer class="example-sidenav" opened mode="side" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    <mat-sidenav-container class="example-container" autosize hasBackdrop="false">
+    <mat-sidenav #drawer class="example-sidenav" opened mode="side" #snav>
       <app-sidebar></app-sidebar>
     </mat-sidenav>
     <mat-sidenav-content class="p-16">
       <router-outlet></router-outlet>
       <footer style="position: fixed; bottom: 0; width: 100%;">
+        <!-- <footer> -->
         <mat-card class="footer-check">
           <p>Copyrightt &copy; 2022 All rights reserved. CRM
             <!-- <span class="footer-desc">Toll-Free Number : 1800 000 000</span> -->
