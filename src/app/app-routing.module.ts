@@ -1,25 +1,51 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./component/landing/home/home.component";
-import {LoginComponent} from "./component/account/login/login.component";
-import {DashboardComponent} from "./component/dashboard/dashboard.component";
-import {ForgetPasswordComponent} from "./component/account/forget-password/forget-password.component";
-import {FooterComponent} from "./component/dashboard/footer/footer.component";
-import {HeaderComponent} from "./component/dashboard/header/header.component";
+import { HomeComponent } from "./component/landing/home/home.component";
+import { ContainerComponent } from './core/layout/dashboard-layout/container/container.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
-  {path:'login', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent},
-  {path:'forgetpassword', component:ForgetPasswordComponent},
+  
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  //Welcome layout routes : start
+  {
+     path: '',
+     component: HomeComponent,
+     children: [
+      {
+        path: 'home',
+        loadChildren: () => import('src/app/component/landing/home/home.module').then((m) => m.HomeModule)
+      }
+     ]
+  },
+  //Welcome layout routes : end
+
+  //Layout routes : start
+  {
+    path:'',
+    component: ContainerComponent,
+    children:[
+      {
+        path:'dashboard',
+        loadChildren: () => import('src/app/component/dashboard/dashboard.module').then((m) => m.DashboardModule),
+        data: {}
+      },
+      {
+        path:'lead',
+        loadChildren: () => import('src/app/component/lead/lead.module').then((m) => m.LeadModule),
+        data: {}
+      },
+      // {
+      //   path:'leadlist',
+      //   loadChildren: () => import('src/app/component/dashboard/dashboard.module').then((m) => m.LeadModule),
+      //   data: {}
+      // }
+    ]
+  },
+  //Layout routes : end
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  declarations: [
-    FooterComponent,
-    HeaderComponent
-  ],
-  exports: [RouterModule, FooterComponent, HeaderComponent]
+exports: [RouterModule]
 })
 export class AppRoutingModule { }
