@@ -1,0 +1,47 @@
+<mat-toolbar mat-elevation-z3>
+      <button type="button" mat-button (click)="drawer.toggle()">
+         <img src="\assets\img\icons\menu.png" alt="menu" />  
+      </button>
+      <span><img class="nav-logo" src="\assets\img\Desktop_Header.webp" alt="Logo"></span>
+      <span class="example-spacer"></span>
+    
+      <!-- <button class="custom_button" mat-focus-indicator mat-button mat-button-base
+      mat-primary ng-star-inserted> <i class="fa-solid fa-arrows-rotate"></i>
+    </button> -->
+      <button style="color: #00A3E3;" [matMenuTriggerFor]="menu" color="primary" mat-button
+        class="example-icon favorite-icon mr-8" aria-label="Example icon-button with heart icon">
+        <mat-icon class="mr-8">account_circle </mat-icon> <span>ABCD</span>
+      </button>
+      <mat-menu #menu="matMenu" class="login-dropdown">
+        <button mat-menu-item id="profile">
+          <span class="profile-photo">
+            <img src="\assets\img\profile-photo.png" alt="profile-photo">
+            <p>Hello, ABCS</p>
+          </span>
+        </button>
+        <button mat-menu-item id="logout" (click)="logout()">
+          <span>
+            <img src="\assets\img\logout.png" alt="logout-icon">Logout
+          </span>
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-container" autosize hasBackdrop="false"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #drawer class="example-sidenav" opened mode="side" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content class="p-16">
+      <router-outlet></router-outlet>
+      <footer>
+        <mat-card class="footer-check">
+          <p>Copyrightt &copy; 2022 All rights reserved. CRM
+            <!-- <span class="footer-desc">Toll-Free Number : 1800 000 000</span> -->
+          </p>
+        </mat-card>
+      </footer>
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>

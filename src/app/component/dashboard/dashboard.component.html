@@ -1,46 +1,121 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- <mat-spinner *ngIf="isLoading" id="loading"></mat-spinner> -->
 
-
-<app-header></app-header>
-
-<div id="layoutSidenav">
-  <div id="layoutSidenav_nav">
-    <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
-      <div class="sb-sidenav-menu">
-        <div class="nav">
-          <div class="sb-sidenav-menu-heading">Core</div>
-          <a class="nav-link" href="index.html">
-            <div class="sb-nav-link-icon"><i class="bi bi-speedometer"></i></div>
-            Dashboard
-          </a>
-          <a class="nav-link" href="index.html">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            Leads
-          </a>
-          <a class="nav-link" href="index.html">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            Project
-          </a>
-          <a class="nav-link" href="index.html">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            Sales
-          </a>
-          <a class="nav-link" href="index.html">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            List
-          </a>
+<!-- <div *ngIf="isLoading">
+    <app-loader></app-loader>
+</div> -->
+<div fxLayout="column" fxFlex="100" class="px-8">
+    <div class="widgets" fxLayout="row wrap" fxLayoutAlign="start stretch" fxFlex="100">
+        <div fxLayout="row " fxFlex="100%" class="breadcrumb-margin">
+            <div fxFlex="100%" class="breadcrumb">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <a>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <p>/</p>
+                    </li>
+                    <li>
+                        <a class="cpointer" (click)="navigateTo(AppRoute.Dashboard)">
+                            Dashboard
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </nav>
-  </div>
-  <div id="layoutSidenav_content">
-    <main>
-      <div class="container-fluid px-4">
-        <h3 class="mt-4">Dashboard</h3>
-      </div>
-    </main>
-  </div>
+        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
+            <mat-card class="dashboard-card current-open-sales custom-hover-effect" fxFlex="100%"
+                (click)="navigateTo(AppRoute.Lead)">
+                <h5 class="dashboard-card-title cpointer">
+                    Current Open Sales Order
+                </h5>
+                <div class="card-contain">
+                    <div class="card-img ">
+                        <i class="fa-solid fa-cart-flatbed"></i>
+                    </div>
+                    <p class="mt-16 counter">Open Lead1</p>
+                    <!-- <p class="mt-16"> {{dashboard.OpenSalesOrder}}</p> -->
+                </div>
+            </mat-card>
+        </div>
+        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
+            <mat-card class="dashboard-card open-credit-limit custom-hover-effect" fxFlex="100%"
+                (click)="navigateTo(AppRoute.Lead)">
+                <h5 class="dashboard-card-title">
+                    Credit Balance for New Order
+                </h5>
+                <div class="card-contain">
+                    <div class="card-img ">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+                    <p class="mt-16 counter">Credit</p>
+                    <p class="mt-16 counter">N/A</p>
+
+                    <!-- <p class="mt-16"> {{dashboard.OpenCreditLimit}}</p> -->
+                </div>
+            </mat-card>
+        </div>
+
+        <!-- <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="33.33%">
+            <mat-card class="dashboard-card overdue-outstanding custom-hover-effect" fxFlex="100%" (click)="navigateTo(AppRoute.OverdueOutstanding)">
+                <h5 class="dashboard-card-title">
+                    Overdue Outstanding
+                </h5>
+                <div class="card-contain">
+                    <div class="card-img ">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <p class="mt-16 counter">1244</p>
+                </div>
+            </mat-card>
+        </div> -->
+
+        <!-- <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="33.33%">
+            <mat-card class="dashboard-card customer-leadger custom-hover-effect" fxFlex="100%" (click)="navigateTo(AppRoute.CustomerLedger)">
+                <h5 class="dashboard-card-title">
+                    Customer Ledger
+                </h5>
+                <div class="card-contain">
+                    <div class="card-img ">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p class="mt-16 counter">937</p>
+                </div>
+            </mat-card>
+        </div> -->
+
+        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
+            <mat-card class="dashboard-card delivered-invoiced custom-hover-effect" fxFlex="100%"
+                (click)="navigateTo(AppRoute.Lead)">
+                <h5 class="dashboard-card-title">
+                    Order Delivered & Invoiced
+                </h5>
+                <div class="card-contain">
+                    <div class="card-img ">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <p class="mt-16 counter">Order Invoice</p>
+                    <!-- <p class="mt-16"> {{dashboard.OrderDeleveryAndInvoice}}</p> -->
+                </div>
+            </mat-card>
+        </div>
+
+        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
+            <mat-card class="dashboard-card order-summary custom-hover-effect" fxFlex="100%"
+                (click)="navigateTo(AppRoute.Lead)">
+                <h5 class="dashboard-card-title">
+                    Product Order & Summary
+                </h5>
+                <div class="card-contain">
+                    <div class="card-img ">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <p class="mt-16 counter">Summary</p>
+                    <!-- <p class="mt-16"> {{dashboard.ProductOrderAndSummary}}</p> -->
+                </div>
+            </mat-card>
+        </div>
+    </div>
 </div>
-
-
-
