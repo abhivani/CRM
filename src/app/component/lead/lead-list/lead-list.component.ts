@@ -13,9 +13,11 @@ export class LeadListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  AddLead(){
+  generateLead(){
     this._router.navigate(['/lead/leadgenerate']);
   }
 
-
+  Back(){
+    this._router.navigate(['/lead'])
+  }
 }
