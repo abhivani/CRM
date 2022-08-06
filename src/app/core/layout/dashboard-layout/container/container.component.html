@@ -1,19 +1,18 @@
 <mat-spinner *ngIf="isLoading" id="loading"></mat-spinner>
+
+<!-- header page -->
 <mat-toolbar mat-elevation-z3>
       <button type="button" mat-button (click)="drawer.toggle()">
          <img src="\assets\img\icons\menu.png" alt="menu" />  
       </button>
       <a class="navbar-brand col-sm-2" href="index.html">C R M </a>
-      <!-- <span><img class="nav-logo" src="\assets\img\Desktop_Header.webp" alt="Logo"></span> -->
       <span class="example-spacer"></span>
-    
-      <!-- <button class="custom_button" mat-focus-indicator mat-button mat-button-base
-      mat-primary ng-star-inserted> <i class="fa-solid fa-arrows-rotate"></i>
-    </button> -->
+
       <button style="color: #00A3E3;" [matMenuTriggerFor]="menu" color="primary" mat-button
         class="example-icon favorite-icon mr-8" aria-label="Example icon-button with heart icon">
         <mat-icon class="mr-8">account_circle </mat-icon> <span>ABCD</span>
       </button>
+
       <mat-menu #menu="matMenu" class="login-dropdown">
         <button mat-menu-item id="profile">
           <span class="profile-photo">
@@ -28,9 +27,12 @@
           </span>
         </button>
       </mat-menu>
-    </mat-toolbar>
+</mat-toolbar>
+<!-- header page -->
 
-    <mat-sidenav-container class="example-container" autosize hasBackdrop="false">
+<!-- class="example-container" autosize -->
+
+    <mat-sidenav-container>
     <mat-sidenav #drawer class="example-sidenav" opened mode="side" #snav>
       <app-sidebar></app-sidebar>
     </mat-sidenav>

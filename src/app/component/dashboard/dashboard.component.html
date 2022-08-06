@@ -1,121 +1,77 @@
-<!-- <mat-spinner *ngIf="isLoading" id="loading"></mat-spinner> -->
-
-<!-- <div *ngIf="isLoading">
-    <app-loader></app-loader>
-</div> -->
 <div fxLayout="column" fxFlex="100" class="px-8">
-    <div class="widgets" fxLayout="row wrap" fxLayoutAlign="start stretch" fxFlex="100">
-        <div fxLayout="row " fxFlex="100%" class="breadcrumb-margin">
-            <div fxFlex="100%" class="breadcrumb">
-                <h3>Dashboard</h3>
-                <ul>
-                    <li>
-                        <a>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <p>/</p>
-                    </li>
-                    <li>
-                        <a class="cpointer" (click)="navigateTo(AppRoute.Dashboard)">
-                            Dashboard
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
-            <mat-card class="dashboard-card current-open-sales custom-hover-effect" fxFlex="100%"
-                (click)="navigateTo(AppRoute.Lead)">
-                <h5 class="dashboard-card-title cpointer">
-                    Current Open Sales Order
-                </h5>
-                <div class="card-contain">
-                    <div class="card-img ">
-                        <i class="fa-solid fa-cart-flatbed"></i>
-                    </div>
-                    <p class="mt-16 counter">Open Lead1</p>
-                    <!-- <p class="mt-16"> {{dashboard.OpenSalesOrder}}</p> -->
-                </div>
-            </mat-card>
-        </div>
-        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
-            <mat-card class="dashboard-card open-credit-limit custom-hover-effect" fxFlex="100%"
-                (click)="navigateTo(AppRoute.Lead)">
-                <h5 class="dashboard-card-title">
-                    Credit Balance for New Order
-                </h5>
-                <div class="card-contain">
-                    <div class="card-img ">
-                        <i class="fa-solid fa-indian-rupee-sign"></i>
-                    </div>
-                    <p class="mt-16 counter">Credit</p>
-                    <p class="mt-16 counter">N/A</p>
-
-                    <!-- <p class="mt-16"> {{dashboard.OpenCreditLimit}}</p> -->
-                </div>
-            </mat-card>
-        </div>
-
-        <!-- <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="33.33%">
-            <mat-card class="dashboard-card overdue-outstanding custom-hover-effect" fxFlex="100%" (click)="navigateTo(AppRoute.OverdueOutstanding)">
-                <h5 class="dashboard-card-title">
-                    Overdue Outstanding
-                </h5>
-                <div class="card-contain">
-                    <div class="card-img ">
-                        <i class="fa-solid fa-file-invoice"></i>
-                    </div>
-                    <p class="mt-16 counter">1244</p>
-                </div>
-            </mat-card>
-        </div> -->
-
-        <!-- <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="33.33%">
-            <mat-card class="dashboard-card customer-leadger custom-hover-effect" fxFlex="100%" (click)="navigateTo(AppRoute.CustomerLedger)">
-                <h5 class="dashboard-card-title">
-                    Customer Ledger
-                </h5>
-                <div class="card-contain">
-                    <div class="card-img ">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <p class="mt-16 counter">937</p>
-                </div>
-            </mat-card>
-        </div> -->
-
-        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
-            <mat-card class="dashboard-card delivered-invoiced custom-hover-effect" fxFlex="100%"
-                (click)="navigateTo(AppRoute.Lead)">
-                <h5 class="dashboard-card-title">
-                    Order Delivered & Invoiced
-                </h5>
-                <div class="card-contain">
-                    <div class="card-img ">
-                        <i class="fa-solid fa-list-check"></i>
-                    </div>
-                    <p class="mt-16 counter">Order Invoice</p>
-                    <!-- <p class="mt-16"> {{dashboard.OrderDeleveryAndInvoice}}</p> -->
-                </div>
-            </mat-card>
-        </div>
-
-        <div class="px-8 mb-16" fxLayoutAlign="start stretch" fxFlex="100%" fxFlex.gt-sm="50%" fxFlex.gt-md="50%">
-            <mat-card class="dashboard-card order-summary custom-hover-effect" fxFlex="100%"
-                (click)="navigateTo(AppRoute.Lead)">
-                <h5 class="dashboard-card-title">
-                    Product Order & Summary
-                </h5>
-                <div class="card-contain">
-                    <div class="card-img ">
-                        <i class="fa-solid fa-file-lines"></i>
-                    </div>
-                    <p class="mt-16 counter">Summary</p>
-                    <!-- <p class="mt-16"> {{dashboard.ProductOrderAndSummary}}</p> -->
-                </div>
-            </mat-card>
-        </div>
+  <div
+    class="widgets"
+    fxLayout="row wrap"
+    fxLayoutAlign="start stretch"
+    fxFlex="100"
+  >
+    <div fxLayout="row " fxFlex="100%" class="breadcrumb-margin">
+      <div fxFlex="100%" class="breadcrumb">
+        <h3>Dashboard</h3>
+        <ul>
+          <li>
+            <a> Home </a>
+          </li>
+          <li>
+            <p>/</p>
+          </li>
+          <li>
+            <a class="cpointer" (click)="navigateTo(AppRoute.Dashboard)">
+              Dashboard
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="card col-sm-3 lg-3">
+                <div class="card-body">
+                  <h3>Total Open Lead</h3>
+                </div>
+            </div>
+          <div class="card col-sm-3 lg-3">
+            <div class="card-body">
+              <h3>Monthly Project</h3>
+
+            </div>
+          </div>
+          <div class="card col-sm-3 lg-3">
+            <div class="card-body">
+              <h3>Monthly Sales</h3>
+            </div>
+          </div>
+          <div class="card col-sm-3 lg-3">
+            <div class="card-body">
+              <h3>No. of Product</h3>
+            </div>
+          </div>
+        </div>
+
+      <div class="row" style="margin-top: 20px">
+        <div class="card col-sm-3 lg-3">
+          <div class="card-body">
+            <h3>Total Open Lead</h3>
+          </div>
+        </div>
+        <div class="card col-sm-3 lg-3">
+          <div class="card-body">
+            <h3>Monthly Project</h3>
+          </div>
+        </div>
+        <div class="card col-sm-3 lg-3">
+          <div class="card-body">
+            <h3>Monthly Sales</h3>
+          </div>
+        </div>
+        <div class="card col-sm-3 lg-3">
+          <div class="card-body">
+            <h3>No. of Product</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
