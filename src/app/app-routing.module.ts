@@ -34,11 +34,11 @@ const routes: Routes = [
         loadChildren: () => import('src/app/component/lead/lead.module').then((m) => m.LeadModule),
         data: {}
       },
-      // {
-      //   path:'leadlist',
-      //   loadChildren: () => import('src/app/component/dashboard/dashboard.module').then((m) => m.LeadModule),
-      //   data: {}
-      // }
+      {
+        path:'project',
+        loadChildren: () => import('src/app/component/project/project.module').then((m) => m.ProjectModule),
+        data: {}
+      }
     ]
   },
   //Layout routes : end

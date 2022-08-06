@@ -18,7 +18,7 @@ export const routes =[
             showMenu: false
       },
       {
-            path:'lead',
+            path:'project',
             data: {icon: 'assignment_turned_in', text:'Project'},
             item: [],
             showMenu: false
