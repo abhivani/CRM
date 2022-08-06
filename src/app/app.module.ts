@@ -22,6 +22,8 @@ import { ForgetPasswordComponent } from './component/account/forget-password/for
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutModule } from './core/layout/dashboard-layout/layout.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ProjectComponent } from './component/project/project.component';
+import { ProjectManagmentComponent } from './component/project-managment/project-managment.component';
 
 export const ROUTES: Routes = [
   {path:'login', component:LoginComponent},
@@ -34,6 +36,8 @@ export const ROUTES: Routes = [
     AppComponent,
     LoginComponent,
     ForgetPasswordComponent,
+    ProjectComponent,
+    ProjectManagmentComponent,
   ],
   imports: [
     RouterModule.forChild(ROUTES),
