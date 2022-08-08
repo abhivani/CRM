@@ -1,12 +1,49 @@
-<h2 mat-dialog-title></h2>
+<!-- <h2 mat-dialog-title></h2>
 <mat-dialog-content class="p-24 pb-0 m-0">
-    <h4>Your Client has been Successfully Created!!</h4>
-</mat-dialog-content>
+    <div class="contact">
+        <h2 mat-dialog-title>Make Client</h2>
+        <hr>
+        <mat-dialog-content class="mat-typography">
+            <div>
+                <input type="text">
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+          </mat-dialog-actions>
+    </div>
+</mat-dialog-content> -->
 
-<mat-dialog-actions class="m-0 p-24">
+<h2 mat-dialog-title>Make Client</h2>
+<mat-dialog-content class="mat-typography">
+<div class="col-sm-6">
+    <label>Client Name : </label>
+    <input type="text" class="form-control">    
+</div>
+
+<div class="col-sm-6">
+    <label>Client Name : </label>
+    <input type="text" class="form-control">    
+</div>
+<div class="col-sm-6">
+    <label>Client Name : </label>
+    <input type="text" class="form-control">    
+</div>
+
+</mat-dialog-content>
+<mat-dialog-actions class="mt-10" align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+</mat-dialog-actions>
+
+
+
+
+ <!--<mat-dialog-actions class="m-0 p-24">
     <div fxLayout="row">
         <div fxLayout="row" fxLayoutAlign="center">
             <button mat-button class="mt-8 mr-8 sync_button" (click)="onSubmitClick()">Submit</button>
         </div>
     </div>
-</mat-dialog-actions>
+</mat-dialog-actions> -->

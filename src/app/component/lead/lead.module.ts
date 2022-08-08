@@ -6,6 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 import { LeadDetailsComponent } from './lead-details/lead-details.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SuccessDialogboxComponent } from 'src/app/core/common/success-dialogbox/success-dialogbox.component';
+import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 export const ROUTES: Routes = [
   {path:'', component:LeadListComponent},
@@ -19,12 +24,16 @@ export const ROUTES: Routes = [
     LeadListComponent,
     LeadGenerateComponent,
     LeadDetailsComponent,
+    SuccessDialogboxComponent
   ],
   imports: [
     RouterModule.forChild(ROUTES),
     CommonModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatMenuModule
   ],
 })
 export class LeadModule { }
