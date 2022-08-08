@@ -20,4 +20,16 @@ export class LeadListComponent implements OnInit {
   Back(){
     this._router.navigate(['/lead'])
   }
+
+
+  lead_list = [{
+    Sno: 1,
+    Company_name : 'Example',
+    Contact_Person : 'example person',
+    Email : 'example@gmail.com',
+    contact : 987654321,
+    create_date : '01/08/2022'
+
+
+  }]
 }

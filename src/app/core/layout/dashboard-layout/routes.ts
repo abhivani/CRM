@@ -12,7 +12,7 @@ export const routes =[
             showMenu: false
       },
       {
-            path:'lead',
+            path:'event',
             data: {icon: 'assignment_turned_in', text:'Event'},
             item: [],
             showMenu: false

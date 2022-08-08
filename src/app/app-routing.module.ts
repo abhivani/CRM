@@ -4,7 +4,7 @@ import { HomeComponent } from "./component/landing/home/home.component";
 import { ContainerComponent } from './core/layout/dashboard-layout/container/container.component';
 
 const routes: Routes = [
-  
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   //Welcome layout routes : start
   {
@@ -37,6 +37,11 @@ const routes: Routes = [
       {
         path:'project',
         loadChildren: () => import('src/app/component/project/project.module').then((m) => m.ProjectModule),
+        data: {}
+      },
+      {
+        path:'event',
+        loadChildren: () => import('src/app/component/event/event.module').then((m) => m.EventModule),
         data: {}
       }
     ]

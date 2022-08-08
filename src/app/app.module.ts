@@ -22,6 +22,7 @@ import { ForgetPasswordComponent } from './component/account/forget-password/for
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutModule } from './core/layout/dashboard-layout/layout.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { EventComponent } from './component/event/event.component';
 
 export const ROUTES: Routes = [
   {path:'login', component:LoginComponent},

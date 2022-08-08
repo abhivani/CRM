@@ -19,105 +19,32 @@
       <div class="card-body">
         <table class="table table-bordered">
           <thead>
-            <tr>
-              <th>SNo</th>
-              <th>Company Name</th>
-              <th>Contact Person</th>
-              <th>Email</th>
-              <th>Contact Number</th>
-              <th>Status</th>
-              <th>Created Date</th>
-              <th>Action</th>
-            </tr>
+          <tr>
+            <th>SNo</th>
+            <th>Company Name</th>
+            <th>Contact Person</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Created Date</th>
+          </tr>
+
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Pending</td>
-              <td>05/08/2022</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Pending</td>
-              <td>05/08/2022</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Pending</td>
-              <td>05/08/2022</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Lost</td>
-              <td>05/08/2022</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Pending</td>
-              <td>05/08/2022</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Lost</td>
-              <td>05/08/2022</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Won</td>
-              <td>05/08/2022</td>
-              <td><button>View</button></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Advait Business Solution</td>
-              <td>Amardip</td>
-              <td>amardeep@gmail.com</td>
-              <td>9874561230</td>
-              <td>Pending</td>
-              <td>05/08/2022</td>
-              <td><button class="btn"><i class="fa fa-eye"></i></button></td>
-            </tr>
+          <tr *ngFor="let lists of lead_list">
+            <th>{{lists.Sno}}</th>
+            <th>{{lists.Company_name}}</th>
+            <th>{{lists.Contact_Person}}</th>
+            <th>{{lists.Email}}</th>
+            <th>{{lists.contact}}</th>
+            <th>{{lists.create_date}}</th>
+          </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-  
-  
+
+
 </div>
 
 

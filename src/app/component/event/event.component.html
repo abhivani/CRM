@@ -1,0 +1,45 @@
+<div class="content">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-1 lg-1">
+          <a class="navbar-brand col-sm-2" routerLink="/lead">Event Calender</a>
+        </div>
+        <div class="col-sm-6 lg-6">
+        </div>
+        <div class="col-sm-5 lg-5">
+          <button class="btn btn-primary" style="display: block; margin-left: auto; margin-right: 0;">Add Event</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" style="margin-top: 10px;">
+    <div class="card">
+      <div class="card-body">
+        <md-event-calendar
+          ng-model="selected"
+          md-events="events"
+          md-event-click="eventClicked($selectedEvent)"
+          md-label="title",
+          md-show-create-link="true"
+          md-create-event-click="eventCreatea($date)"
+          md-create-disabled="true"
+          auto-height=""
+          class="md-primary"
+        >
+          <md-event-calendar-header class="md-center">
+            <md-event-calendar-prev></md-event-calendar-prev>
+            <md-event-calendar-title></md-event-calendar-title>
+            <md-event-calendar-next></md-event-calendar-next>
+          </md-event-calendar-header>
+        </md-event-calendar>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
