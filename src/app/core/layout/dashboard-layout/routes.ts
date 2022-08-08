@@ -12,8 +12,8 @@ export const routes =[
             showMenu: false
       },
       {
-            path:'event',
-            data: {icon: 'assignment_turned_in', text:'Event'},
+            path:'customer',
+            data: {icon: 'assignment_turned_in', text:'Customer'},
             item: [],
             showMenu: false
       },
@@ -24,19 +24,19 @@ export const routes =[
             showMenu: false
       },
       {
-            path:'lead',
+            path:'task',
             data: {icon: 'assignment_turned_in', text:'Task'},
             item: [],
             showMenu: false
       },
       {
-            path:'lead',
-            data: {icon: 'assignment_turned_in', text:'Contact'},
+            path:'event',
+            data: {icon: 'assignment_turned_in', text:'Event'},
             item: [],
             showMenu: false
       },
       {
-            path:'lead',
+            path:'support',
             data: {icon: 'assignment_turned_in', text:'IT Support'},
             item: [],
             showMenu: false

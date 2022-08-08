@@ -5,10 +5,38 @@
         <div class="col-sm-1 lg-1">
           <a class="navbar-brand col-sm-2" routerLink="/lead">Lead List</a>
         </div>
-        <div class="col-sm-6 lg-6">
+        <div class="col-sm-8 lg-8">
+          
         </div>
-        <div class="col-sm-5 lg-5">
-          <button (click)="generateLead()" class="btn btn-primary" style="display: block; margin-left: auto; margin-right: 0;">Generate Lead</button>
+        <div class="col-sm-3 lg-3">
+          <button (click)="generateLead()" class="btn btn-secondary" style="display: block; margin-left: auto; margin-right: 0;">Generate Lead</button>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-2">
+        <div class="col-sm-2">
+          <select class="form-control">
+            <option value="null">- Source -</option>
+            <option value="null">Facebook</option>
+            <option value="null">Linkedin</option>
+            <option value="null">Google</option>
+            <option value="null">Excel</option>
+            <option value="null">Other</option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <select class="form-control">
+            <option value="null">- Status -</option>
+            <option value="null">New</option>
+            <option value="null">Old</option>
+            <option value="null">InProcess</option>
+            <option value="null">Closed</option>
+            <option value="null">End</option>
+          </select>
+        </div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2">
+          <button class="btn btn-primary" style="display: block; margin-left: auto; margin-right: 0;">Download Excel</button>
         </div>
       </div>
     </div>
@@ -26,20 +54,25 @@
             <th>Email</th>
             <th>Contact Number</th>
             <th>Created Date</th>
+            <th class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu icon-16"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></th>
           </tr>
 
           </thead>
           <tbody>
           <tr *ngFor="let lists of lead_list">
-            <th>{{lists.Sno}}</th>
-            <th>{{lists.Company_name}}</th>
-            <th>{{lists.Contact_Person}}</th>
-            <th>{{lists.Email}}</th>
-            <th>{{lists.contact}}</th>
-            <th>{{lists.create_date}}</th>
+            <td>{{lists.Sno}}</td>
+            <td>{{lists.Company_name}}</td>
+            <td>{{lists.Contact_Person}}</td>
+            <td>{{lists.Email}}</td>
+            <td>{{lists.contact}}</td>
+            <td>{{lists.create_date}}</td>
+            <td class="text-center"><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit icon-16"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></a>&nbsp;
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x icon-16"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></td>
           </tr>
           </tbody>
         </table>
+        <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
+        </mat-paginator>
       </div>
     </div>
   </div>

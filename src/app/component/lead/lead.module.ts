@@ -4,7 +4,7 @@ import { LeadListComponent } from './lead-list/lead-list.component';
 import { LeadGenerateComponent } from './lead-generate/lead-generate.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatCard, MatCardModule } from '@angular/material/card';
-
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 
 export const ROUTES: Routes = [
   {path:'', component:LeadListComponent},
@@ -20,7 +20,8 @@ export const ROUTES: Routes = [
   imports: [
     RouterModule.forChild(ROUTES),
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule
   ],
 })
 export class LeadModule { }

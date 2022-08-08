@@ -43,6 +43,11 @@ const routes: Routes = [
         path:'event',
         loadChildren: () => import('src/app/component/event/event.module').then((m) => m.EventModule),
         data: {}
+      },
+      {
+        path:'customer',
+        loadChildren: () => import('src/app/component/customer/customer.module').then((m) => m.CustomerModule),
+        data: {}
       }
     ]
   },
