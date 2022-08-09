@@ -9,7 +9,7 @@ import { SuccessDialogboxComponent } from 'src/app/core/common/success-dialogbox
 })
 export class LeadDetailsComponent implements OnInit {
 
-  public contact:boolean;
+  public contact:boolean = true;
   public lead: boolean;
   public estimate: boolean;
   public praposal: boolean;
@@ -17,14 +17,14 @@ export class LeadDetailsComponent implements OnInit {
   public notes: boolean;
   public file: boolean;
   public event: boolean;
-  public isActive: string;
+  public isActive: string = 'contact';
 
   constructor(
     private _dialog : MatDialog
   ) { }
 
   ngOnInit(): void {
-    this.contact = true;
+
   }
 
   onSubmit(){

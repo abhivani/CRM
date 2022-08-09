@@ -18,6 +18,7 @@
   <div class="content mt-2">
     <div class="card">
       <div class="card-body">
+<<<<<<< HEAD
         <button [class.active]="isActive==='contact'" mat-button (click)="onDetails('contact')">Contacts</button>
         <button mat-button [class.active]="isActive==='lead'" (click)="onDetails('lead')">Lead Info</button>
         <button mat-button (click)="onDetails('estimate')">Estimates</button>
@@ -26,6 +27,16 @@
         <button mat-button (click)="onDetails('notes')">Notes</button>
         <button mat-button (click)="onDetails('file')">File</button>
         <button mat-button (click)="onDetails('event')">Events</button>
+=======
+        <button [class.active-button]="isActive==='contact'" mat-button (click)="onDetails('contact')">Contacts</button>
+        <button [class.active-button]="isActive==='lead'" mat-button (click)="onDetails('lead')">Lead Info</button>
+        <button [class.active-button]="isActive==='estimate'" mat-button (click)="onDetails('estimate')">Estimates</button>
+        <button [class.active-button]="isActive==='praposal'" mat-button (click)="onDetails('praposal')">Praposals</button>
+        <button [class.active-button]="isActive==='contract'" mat-button (click)="onDetails('contract')">Contracts</button>
+        <button [class.active-button]="isActive==='notes'" mat-button (click)="onDetails('notes')">Notes</button>
+        <button [class.active-button]="isActive==='file'" mat-button (click)="onDetails('file')">File</button>
+        <button [class.active-button]="isActive==='event'" mat-button (click)="onDetails('event')">Events</button>
+>>>>>>> 506b02d02049a56a5f2242a1c8da1d28c443050f
       </div>
     </div>
   </div>
