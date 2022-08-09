@@ -1,49 +1,123 @@
-<!-- <h2 mat-dialog-title></h2>
-<mat-dialog-content class="p-24 pb-0 m-0">
-    <div class="contact">
-        <h2 mat-dialog-title>Make Client</h2>
-        <hr>
-        <mat-dialog-content class="mat-typography">
-            <div>
-                <input type="text">
-            </div>
-        </mat-dialog-content>
-        <mat-dialog-actions>
-            <button mat-button mat-dialog-close>Cancel</button>
-            <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
-          </mat-dialog-actions>
+<div class="content" style="margin-top: 10px;">
+    <div class="card">
+      <div class="card-body">
+        <div class="form">
+            <form method="get">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <h3><b>Lead Information</b></h3>
+                        <div class="row" style="margin-top: 2px;">
+                            <div class="col-sm-4 lg-4">
+                                <label>Lead Owner</label>
+                                <input type="text" class="form-control" name="LeadOwner" value="Sales Person" disabled>
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>Company Name</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>Status</label>
+                                <select class="form-control">
+                                    <option value="">--Select Status--</option>
+                                    <option value="">New</option>
+                                    <option value="">Old</option>
+                                </select>
+                            </div>
+                        </div><br>
+                        <div class="row" style="margin-top: 2px;">
+                            <div class="col-sm-4 lg-4">
+                                <label>Contact Person</label>
+                                <input type="text" class="form-control" name="LeadOwner" >
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>Email</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>Mobile</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row" style="margin-top: 2px;">
+                            <div class="col-sm-4 lg-4">
+                                <label>Lead Source</label>
+                                <select class="form-control">
+                                    <option value="">--Select Lead Source--</option>
+                                    <option value="">Google</option>
+                                    <option value="">Linked</option>
+                                    <option value="">Web Research</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>Industry</label>
+                                <select class="form-control">
+                                    <option value="">--Select Industry--</option>
+                                    <option value="">ASP (Application Service Provider)</option>
+                                    <option value="">Data/Telecom OEM</option>
+                                    <option value="">ERP (Enterprise Resource Planning)</option>
+                                    <option value="">Goverment</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>No. of Employees</label>
+                                <input type="text" class="form-control" name="LeadOwner" >
+                            </div>
+                        </div><br>
+                        <h3><b>Address Information</b></h3>
+                        <div class="row" style="margin-top: 2px;">
+                            <div class="col-sm-4 lg-4">
+                                <label>Street</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>City</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>State</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                        </div><br>
+                        <div class="row" style="margin-top: 2px;">
+                            <div class="col-sm-4 lg-4">
+                                <label>Pincode</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                            <div class="col-sm-4 lg-4">
+                                <label>Country</label>
+                                <input type="text" class="form-control" name="LeadOwner">
+                            </div>
+                        </div><br>
+                        <h3><b>Description Information</b></h3>
+                        <div class="row" style="margin-top: 2px;">
+                            <div class="col-sm-12 lg-12">
+                                <label>Description</label>
+                               <textarea class="form-control"></textarea>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-sm-9"></div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-danger">Back</button>&nbsp;
+                                <button class="btn btn-success">Submit</button>&nbsp;
+                                <!-- <button class="btn btn-primary">Reset</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+      
     </div>
-</mat-dialog-content> -->
-
-<h2 mat-dialog-title>Make Client</h2>
-<mat-dialog-content class="mat-typography">
-<div class="col-sm-6">
-    <label>Client Name : </label>
-    <input type="text" class="form-control">    
+    <br><br><br><br>
 </div>
 
-<div class="col-sm-6">
-    <label>Client Name : </label>
-    <input type="text" class="form-control">    
-</div>
-<div class="col-sm-6">
-    <label>Client Name : </label>
-    <input type="text" class="form-control">    
-</div>
-
-</mat-dialog-content>
+<!-- </mat-dialog-content>
 <mat-dialog-actions class="mt-10" align="end">
   <button mat-button mat-dialog-close>Cancel</button>
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
-</mat-dialog-actions>
-
-
-
-
- <!--<mat-dialog-actions class="m-0 p-24">
-    <div fxLayout="row">
-        <div fxLayout="row" fxLayoutAlign="center">
-            <button mat-button class="mt-8 mr-8 sync_button" (click)="onSubmitClick()">Submit</button>
-        </div>
-    </div>
 </mat-dialog-actions> -->
+
+

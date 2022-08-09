@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Route, Router } from '@angular/router';
 import {Subject} from 'rxjs';
 import { LeadGenerateComponent } from './../lead-generate/lead-generate.component';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-lead-list',
@@ -33,16 +34,7 @@ export class LeadListComponent implements OnInit {
   }
 
 
-  lead_list = [{
-    Sno: 1,
-    Company_name : 'Example',
-    Contact_Person : 'example person',
-    Email : 'example@gmail.com',
-    contact : 987654321,
-    create_date : '01/08/2022'
-
-
-  }]
+  
 
   // Pagination code start
 
@@ -65,6 +57,36 @@ export class LeadListComponent implements OnInit {
   // Pagination code end
 
   
+  fileName= 'ExcelSheet.xlsx';
+  
+  lead_list = [{
+    Sno: 1,
+    Company_name : 'Example',
+    Contact_Person : 'example person',
+    Email : 'example@gmail.com',
+    contact : 987654321,
+    create_date : '01/08/2022'
+
+
+  }]
+
+  exportexcel(): void
+  {
+    
+
+    /* pass here the table id */
+    let element = document.getElementById('excel-table');
+    const ws: XLSX.WorkSheet =XLSX.utils.table_to_sheet(element);
+ 
+    /* generate workbook and add the worksheet */
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+ 
+    /* save to file */  
+    XLSX.writeFile(wb, this.fileName);
+ 
+  }
+
 }
 
 
