@@ -18,19 +18,19 @@
   <div class="content mt-2">
     <div class="card">
       <div class="card-body">
-        <button mat-button>Contacts</button>
-        <button class="active" mat-raised-button>Lead Info</button>
-        <button mat-button>Estimates</button>
-        <button mat-button>Praposals</button>
-        <button mat-button>Contracts</button>
-        <button mat-button>Notes</button>
-        <button mat-button>File</button>
-        <button mat-button>Events</button>
+        <button [class.active]="isActive==='contact'" mat-button (click)="onDetails('contact')">Contacts</button>
+        <button [class.active]="isActive==='lead'" mat-raised-button (click)="onDetails('lead')">Lead Info</button>
+        <button mat-button (click)="onDetails('estimate')">Estimates</button>
+        <button mat-button (click)="onDetails('praposal')">Praposals</button>
+        <button mat-button (click)="onDetails('contract')">Contracts</button>
+        <button mat-button (click)="onDetails('notes')">Notes</button>
+        <button mat-button (click)="onDetails('file')">File</button>
+        <button mat-button (click)="onDetails('event')">Events</button>
       </div>
     </div>
   </div>
 
-  <div class="content mt-2">
+  <div class="content mt-2" *ngIf="contact">
     <div class="card">
       <div class="card-body">
         <h2>Contact Info</h2>
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-<div class="content mt-2">
+<div class="content mt-2" *ngIf="lead">
   <div class="card">
     <div class="card-body">
       <h2>Lead Info</h2>
@@ -64,7 +64,7 @@
   </div>
 </div>
 
-<div class="content mt-2">
+<div class="content mt-2" *ngIf="estimate">
   <div class="card">
     <div class="card-body">
       <h2>Estimate Info</h2>
@@ -81,7 +81,7 @@
   </div>
 </div>
 
-<div class="content mt-2">
+<div class="content mt-2" *ngIf="praposal">
   <div class="card">
     <div class="card-body">
       <h2>Praposal Info</h2>
@@ -98,7 +98,7 @@
   </div>
 </div>
 
-<div class="content mt-2">
+<div class="content mt-2" *ngIf="contract">
   <div class="card">
     <div class="card-body">
       <h2>Contracts Info</h2>
@@ -123,7 +123,7 @@
   </div>
 </div>
 
-<div class="content mt-2">
+<div class="content mt-2" *ngIf="notes">
   <div class="card">
     <div class="card-body">
       <h2>Notes Info</h2>
@@ -148,7 +148,7 @@
   </div>
 </div>
 
-<div class="content mt-2">
+<div class="content mt-2" *ngIf="file">
   <div class="card">
     <div class="card-body">
       <h2>File Info</h2>
@@ -166,7 +166,7 @@
 </div>
 
 
-<div class="content mt-2">
+<div class="content mt-2" *ngIf="event">
   <div class="card">
     <div class="card-body">
       <h2>Events Info</h2>

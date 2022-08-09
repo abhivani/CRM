@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,13 +9,20 @@ import { Router } from '@angular/router';
 })
 export class LeadGenerateComponent implements OnInit {
 
-  constructor(private _router : Router) { }
+  constructor(private _router : Router,
+    @Inject(MAT_DIALOG_DATA) private data: any,
+    public dialogRef: MatDialogRef<LeadGenerateComponent>
+    ) { }
 
   ngOnInit(): void {
   }
 
   Back(){
     this._router.navigate(['/lead'])
+  }
+
+  onSubmitClick(){
+    this.dialogRef.close();
   }
 
 }

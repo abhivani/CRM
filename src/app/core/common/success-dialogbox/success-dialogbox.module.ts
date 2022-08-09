@@ -13,6 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     MatDialogModule,
     MatButtonModule
+  ],
+  exports: [
+    SuccessDialogboxComponent
   ]
 })
 export class SuccessDialogboxModule { }

@@ -9,11 +9,22 @@ import { SuccessDialogboxComponent } from 'src/app/core/common/success-dialogbox
 })
 export class LeadDetailsComponent implements OnInit {
 
+  public contact:boolean;
+  public lead: boolean;
+  public estimate: boolean;
+  public praposal: boolean;
+  public contract: boolean;
+  public notes: boolean;
+  public file: boolean;
+  public event: boolean;
+  public isActive: string;
+
   constructor(
     private _dialog : MatDialog
   ) { }
 
   ngOnInit(): void {
+    this.contact = true;
   }
 
   onSubmit(){
@@ -25,6 +36,99 @@ export class LeadDetailsComponent implements OnInit {
     });
   }
 
+  onDetails(path : string){
 
+    this.isActive = path;
+
+    if (path == 'contact') {      
+      this.contact = true;
+      this.lead = false;
+      this.estimate = false;
+      this.praposal = false;
+      this.contract = false;
+      this.notes = false;
+      this.file = false;
+      this.event = false;      
+      return;
+    }
+
+    if (path == 'lead') {
+      this.contact = false;
+      this.lead = true;
+      this.estimate = false;
+      this.praposal = false;
+      this.contract = false;
+      this.notes = false;
+      this.file = false;
+      this.event = false;
+      return;
+    }
+    if (path == 'estimate') {
+      this.contact = false;
+      this.lead = false;
+      this.estimate = true;
+      this.praposal = false;
+      this.contract = false;
+      this.notes = false;
+      this.file = false;
+      this.event = false;
+      return;
+    }
+    if (path == 'praposal') {
+      this.contact = false;
+      this.lead = false;
+      this.estimate = false;
+      this.praposal = true;
+      this.contract = false;
+      this.notes = false;
+      this.file = false;
+      this.event = false;
+      return;
+    }
+    if (path == 'contract') {
+      this.contact = false;
+      this.lead = false;
+      this.estimate = false;
+      this.praposal = false;
+      this.contract = true;
+      this.notes = false;
+      this.file = false;
+      this.event = false;
+      return;
+    }
+    if (path == 'notes') {
+      this.contact = false;
+      this.lead = false;
+      this.estimate = false;
+      this.praposal = false;
+      this.contract = false;
+      this.notes = true;
+      this.file = false;
+      this.event = false;
+      return;
+    }
+    if (path == 'file') {
+      this.contact = false;
+      this.lead = false;
+      this.estimate = false;
+      this.praposal = false;
+      this.contract = false;
+      this.notes = false;
+      this.file = true;
+      this.event = false;
+      return;
+    }
+    if (path == 'event') {
+      this.contact = false;
+      this.lead = false;
+      this.estimate = false;
+      this.praposal = false;
+      this.contract = false;
+      this.notes = false;
+      this.file = false;
+      this.event = true;
+      return;
+    }
+  }
 
 }

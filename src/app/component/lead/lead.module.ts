@@ -10,6 +10,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SuccessDialogboxComponent } from 'src/app/core/common/success-dialogbox/success-dialogbox.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
+import { SuccessDialogboxModule } from 'src/app/core/common/success-dialogbox/success-dialogbox.module';
 
 
 export const ROUTES: Routes = [
@@ -23,8 +24,7 @@ export const ROUTES: Routes = [
   declarations: [
     LeadListComponent,
     LeadGenerateComponent,
-    LeadDetailsComponent,
-    SuccessDialogboxComponent
+    LeadDetailsComponent
   ],
   imports: [
     RouterModule.forChild(ROUTES),
@@ -33,7 +33,8 @@ export const ROUTES: Routes = [
     MatPaginatorModule,
     MatDialogModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    SuccessDialogboxModule
   ],
 })
 export class LeadModule { }

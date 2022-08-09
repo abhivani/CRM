@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Route, Router } from '@angular/router';
 import {Subject} from 'rxjs';
+import { LeadGenerateComponent } from './../lead-generate/lead-generate.component';
 
 @Component({
   selector: 'app-lead-list',
@@ -9,13 +11,21 @@ import {Subject} from 'rxjs';
 })
 export class LeadListComponent implements OnInit {
 
-  constructor(private _router : Router) { }
+  constructor(
+    private _router : Router,
+    private _dialog : MatDialog
+    ) { }
 
   ngOnInit(): void {
   }
 
   generateLead(){
-    this._router.navigate(['/lead/leadgenerate']);
+    const dialogRef = this._dialog.open(LeadGenerateComponent,
+      {
+        width : '90%',
+        height: '90%',
+        disableClose : true
+      });
   }
 
   Back(){
