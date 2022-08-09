@@ -9,7 +9,7 @@
             <!-- <a class="navbar-brand col-sm-2" routerLink="/lead">Lead Details - name</a> -->
           </div>
           <div class="col-sm-2 lg-2">
-            <button class="btn btn-success" (click)="onSubmit()" style="display: block; margin-left: auto; margin-right: 0;">Make Client</button>
+            <button class="btn btn-light" (click)="onSubmit()" style="display: block; margin-left: auto; margin-right: 0;">Make Client</button>
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@
     <div class="card">
       <div class="card-body">
         <button [class.active]="isActive==='contact'" mat-button (click)="onDetails('contact')">Contacts</button>
-        <button [class.active]="isActive==='lead'" mat-raised-button (click)="onDetails('lead')">Lead Info</button>
+        <button mat-button [class.active]="isActive==='lead'" (click)="onDetails('lead')">Lead Info</button>
         <button mat-button (click)="onDetails('estimate')">Estimates</button>
         <button mat-button (click)="onDetails('praposal')">Praposals</button>
         <button mat-button (click)="onDetails('contract')">Contracts</button>
@@ -33,16 +33,38 @@
   <div class="content mt-2" *ngIf="contact">
     <div class="card">
       <div class="card-body">
-        <h2>Contact Info</h2>
-        <hr>
-        <div class="form-group" style="padding: 5px;">
-          <div class="row">
-            <label class="col-md-2">Contact Name</label>
-           <div class="col-md-10">
-            <input class="form-control" type="text" placeholder="Contact Name">
-           </div>
+        <div class="row">
+          <h2 class="col-sm-3 lg-3">Contact Info</h2>
+          <div class="title-button-group col-sm-9 lg-9" align="end">
+            <a class="btn btn-light">Add Contact</a>
           </div>
         </div>
+        <hr>
+
+        <table class="table table-striped text-center">
+          <thead>
+          <tr>
+            <th>SNo</th>
+            <th>Name</th>
+            <th>Job Title</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Skype</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Abhishek</td>
+            <td>Developer</td>
+            <td>abhi@gmail.com</td>
+            <td>7894561230</td>
+            <td>Abhi@skype.com</td>
+            <td><a class="btn btn-danger">Delete</a></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -50,13 +72,77 @@
 <div class="content mt-2" *ngIf="lead">
   <div class="card">
     <div class="card-body">
-      <h2>Lead Info</h2>
+      <h2>Client Info</h2>
       <hr>
       <div class="form-group" style="padding: 5px;">
         <div class="row">
-          <label class="col-md-2">Lead Name</label>
+            <label for="companyname" class="col-md-2">Company Name</label>
+            <div class="col-md-10">
+              <input class="form-control" type="text" placeholder="Company Name" value="Advait Business">
+            </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="status" class="col-md-2">Status</label>
           <div class="col-md-10">
-            <input class="form-control" type="text" placeholder="Lead Name">
+            <input class="form-control" type="text" placeholder="Company Name" value="Won">
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="Owner" class="col-md-2">Owner</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" placeholder="Company Name" value="ABC">
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="Source" class="col-md-2">Source</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" placeholder="Company Name" value="Google">
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="Address" class="col-md-2">Address</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" placeholder="Company Name" value="Ahmedabad">
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="City" class="col-md-2">City</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" placeholder="Company Name" value="Ahmedabad">
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="State" class="col-md-2">State</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" placeholder="State Name" value="Gujarat">
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="Pincode" class="col-md-2">Pincode</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" placeholder="Company Name" value="380015">
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <label for="Country" class="col-md-2">Country</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" placeholder="Country" value="India">
           </div>
         </div>
       </div>
