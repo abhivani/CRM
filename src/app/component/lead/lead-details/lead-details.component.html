@@ -71,6 +71,7 @@
     </div>
   </div>
 
+  <!-- Lead Info start-->
 <div class="content mt-2" *ngIf="lead">
   <div class="card">
     <div class="card-body">
@@ -148,44 +149,73 @@
           </div>
         </div>
       </div>
+      <div class="form-group" style="padding: 5px;">
+        <div class="row">
+          <div class="col-md-2">
+            <button class="btn btn-success">Save</button>
+          </div>
+        </div>
+      </div>
+      <br>
     </div>
   </div>
 </div>
 
+<!-- Lead Info End -->
+
+<!-- Estimation Info start -->
 <div class="content mt-2" *ngIf="estimate">
   <div class="card">
     <div class="card-body">
       <h2>Estimate Info</h2>
       <hr>
-      <div class="form-group" style="padding: 5px;">
-        <div class="row">
-          <label class="col-md-2">Estimate Name</label>
-          <div class="col-md-10">
-            <input class="form-control" type="text" placeholder="Estimate Name" disabled>
-          </div>
-        </div>
-      </div>
+      <table class="table table-striped text-center">
+        <thead>
+        <tr>
+          <th>Estimate</th>
+          <th>Estimate Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
+<!-- Estimate Info end -->
 
+<!-- Praposal Info start -->
 <div class="content mt-2" *ngIf="praposal">
   <div class="card">
     <div class="card-body">
       <h2>Praposal Info</h2>
       <hr>
-      <div class="form-group" style="padding: 5px;">
-        <div class="row">
-          <label class="col-md-2">Praposal Name</label>
-          <div class="col-md-10">
-            <input class="form-control" type="text" placeholder="Praposal Name">
-          </div>
-        </div>
-      </div>
+      <table class="table table-striped text-center">
+        <thead>
+        <tr>
+          <th>Praposal</th>
+          <th>Praposal Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
+<!-- Praposal Info end -->
 
+<!-- Contract Info Start -->
 <div class="content mt-2" *ngIf="contract">
   <div class="card">
     <div class="card-body">
@@ -210,7 +240,9 @@
     </div>
   </div>
 </div>
+<!-- Contract Info End -->
 
+<!-- Notes Info Start -->
 <div class="content mt-2" *ngIf="notes">
   <div class="card">
     <div class="card-body">
@@ -235,6 +267,8 @@
     </div>
   </div>
 </div>
+<!-- Notes Info End -->
+
 
 <div class="content mt-2" *ngIf="file">
   <div class="card">
