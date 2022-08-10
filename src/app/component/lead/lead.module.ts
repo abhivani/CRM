@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { SuccessDialogboxModule } from 'src/app/core/common/success-dialogbox/success-dialogbox.module';
 import { AddLeadContactComponent } from './add-lead-contact/add-lead-contact.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 export const ROUTES: Routes = [
@@ -36,7 +37,8 @@ export const ROUTES: Routes = [
     MatDialogModule,
     MatButtonModule,
     MatMenuModule,
-    SuccessDialogboxModule
+    SuccessDialogboxModule,
+    MatIconModule
   ],
 })
 export class LeadModule { }
