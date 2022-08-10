@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SuccessDialogboxComponent } from 'src/app/core/common/success-dialogbox/success-dialogbox.component';
+import { AddLeadContactComponent } from './../add-lead-contact/add-lead-contact.component';
 
 @Component({
   selector: 'app-lead-details',
@@ -129,6 +130,15 @@ export class LeadDetailsComponent implements OnInit {
       this.event = true;
       return;
     }
+  }
+
+  onAddContact(){
+    const dialogRef = this._dialog.open(AddLeadContactComponent,
+      {
+        width : '90%',
+        height: '90%',
+        disableClose : true
+      });
   }
 
 }

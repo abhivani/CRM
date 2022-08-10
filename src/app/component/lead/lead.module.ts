@@ -10,12 +10,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { SuccessDialogboxModule } from 'src/app/core/common/success-dialogbox/success-dialogbox.module';
+import { AddLeadContactComponent } from './add-lead-contact/add-lead-contact.component';
 
 
 export const ROUTES: Routes = [
   {path:'', component:LeadListComponent},
   {path:'leadgenerate', component:LeadGenerateComponent},
-  {path:'leaddetails', component:LeadDetailsComponent}
+  {path:'leaddetails', component:LeadDetailsComponent},
+  {path:'addleadcontact', component:AddLeadContactComponent}
 ]
 
 
@@ -23,7 +25,8 @@ export const ROUTES: Routes = [
   declarations: [
     LeadListComponent,
     LeadGenerateComponent,
-    LeadDetailsComponent
+    LeadDetailsComponent,
+    AddLeadContactComponent
   ],
   imports: [
     RouterModule.forChild(ROUTES),

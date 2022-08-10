@@ -3,17 +3,17 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-lead-generate',
-  templateUrl: './lead-generate.component.html',
-  styleUrls: ['./lead-generate.component.css']
+  selector: 'app-add-lead-contact',
+  templateUrl: './add-lead-contact.component.html',
+  styleUrls: ['./add-lead-contact.component.css']
 })
-export class LeadGenerateComponent implements OnInit {
+export class AddLeadContactComponent implements OnInit {
 
   constructor(
     private _router : Router,
     @Inject(MAT_DIALOG_DATA) private data: any,
-    public dialogRef: MatDialogRef<LeadGenerateComponent>
-    ) { }
+    public dialogRef: MatDialogRef<AddLeadContactComponent>
+  ) { }
 
   ngOnInit(): void {
   }
@@ -25,5 +25,4 @@ export class LeadGenerateComponent implements OnInit {
   onSubmitClick(){
     this.dialogRef.close();
   }
-
 }
